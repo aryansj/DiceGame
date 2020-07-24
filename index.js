@@ -8,14 +8,11 @@ randomNumber2 = Math.floor(randomNumber2 * 6) + 1 ;
 
 document.querySelector( ".dice .img2" ).setAttribute( "src", "images/dice" + randomNumber2 + ".png" );
 
-if ( randomNumber1 > randomNumber2 ) {
-  document.querySelector("h1").innerHTML = "PLAYER 1 WINS!"
-}
+var sum = randomNumber1 + randomNumber2;
 
-if ( randomNumber1 < randomNumber2 ) {
-  document.querySelector("h1").innerHTML = "PLAYER 2 WINS!"
-}
 
-if ( randomNumber1 === randomNumber2 ) {
-  document.querySelector("h1").innerHTML = "DRAW!"
+if (sum%2 === 1) {
+  document.querySelector("h1").innerHTML = "ODD WINS!";
+} else {
+  document.querySelector("h1").innerHTML = "EVEN WINS!";
 }
